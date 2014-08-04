@@ -1,6 +1,7 @@
 使用方法：
 1、 请先填写相关配置：在Config.properties里 client_ID ：appkey 创建应用获取到的appkey client_SERCRET ：app_secret 创建应用获取到的appsecret redirect_URI : 回调地址 OAuth2的回调地址
 然后调用example里：OAuth4Code.java
+
 public class OAuth4Code {
 	public static void main(String [] args) throws WeiboException, IOException{
 		Oauth oauth = new Oauth();
@@ -22,9 +23,11 @@ public class OAuth4Code {
 	}
 
 }
+
 运行后会弹出浏览器地址跳转到授权认证页面，然后输入你的微博帐号和密码，会调转到你的回调地址页面，url后面会传递code参数
 然后在console输入code就能获取到oauth2的accesstoken
 接下来即可调用example，再此以user／show接口为例：
+
 public class ShowUser {
 
 	public static void main(String[] args) {
@@ -40,6 +43,7 @@ public class ShowUser {
 		}
 	}
 }
+
 access_token为auth4code获取到的oauth2的accesstoken。
 由于目前只开放支持code的oauth认证方式，所以sdk暂时只支持code获取token方式。
 
