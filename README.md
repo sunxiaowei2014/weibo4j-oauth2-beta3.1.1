@@ -30,7 +30,7 @@ public class OAuth4Code {
 
 4、 然后在console输入code就能获取到oauth2的accesstoken
 
-5、 接下来即可调用example，再此以user／show接口为例：
+5、 接下来即可调用example，在此以user／show接口为例：
 
 public class ShowUser {
 
